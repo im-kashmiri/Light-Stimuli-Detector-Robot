@@ -1,7 +1,6 @@
 import matplotlib.pyplot as plt
 import numpy as np
 import time
-from IPython.display import clear_output
 
 # Environment Setup
 room_size = 100
@@ -59,7 +58,6 @@ def plot_environment(robot_pos, light_pos, step):
 
 # Simulation Loop
 for step in range(100):
-    clear_output(wait=True)
 
     # Sense
     left, right = sense_light(robot_position, robot_direction)
