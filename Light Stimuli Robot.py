@@ -69,3 +69,14 @@ for step in range(100):
     # Show
     plot_environment(robot_position, light_position, step)
     time.sleep(0.1)
+
+# Plot
+fig, ax = plt.subplots(figsize=(6, 6))
+ax.set_xlim(0, room_size)
+ax.set_ylim(0, room_size)
+ax.plot(*light_position, 'yo', label="Light Source")
+ax.plot(*st.session_state.robot_position, 'bo', label="Robot")
+ax.set_title("Light-Chasing Robot")
+ax.legend()
+st.pyplot(fig)  # <- THIS IS CRITICAL
+
